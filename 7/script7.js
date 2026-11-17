@@ -182,11 +182,11 @@ fibonacciForm3.addEventListener('submit', function(event) {
 
     resultFibonacci3.style.color = 'green';
     resultFibonacci3.innerHTML = `
-        <strong>Результат Фібоначчі для n = ${n}:</strong> ${resultMemo}<br><br>
-        <strong>1. Звичайна рекурсія:</strong><br>
-        — Кількість викликів функції: <code>${numberOfRecursionCalls}</code><br>
-        <strong>2. Мемоізована рекурсія (з замиканням):</strong><br>
-        — Кількість викликів функції: <code>${memoCalls}</code><br>
+        <b>Результат Фібоначчі для n = ${n}:</b> ${resultMemo}<br><br>
+        <b>1. Звичайна рекурсія:</b><br>
+        <p>- Кількість викликів функції: ${numberOfRecursionCalls}</p><br>
+        <b>2. Мемоізована рекурсія (з замиканням):</b><br>
+        <p>- Кількість викликів функції: ${memoCalls}</p><br>
     `;
 });
 
