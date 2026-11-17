@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<title>Lab6</title>
+		<link type="text/css" href="css.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div>
+<h2>Завдання 1</h2>
+
+<form id="storageForm">
+        <label for="gbInput">Введіть об'єм пам'яті (у ГБ):</label>
+        <input type="text" id="gbInput" required>
+        <br>
+        <button type="submit">Розрахувати</button>
+</form>
+
+<div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+</div>
+
+<div>
+<h2>Завдання 3</h2>
+<script>
+    let furniture = [
+        { code: "M-101", name: "Диван кутовий", price: 18500, quantity: 2 },
+        { code: "M-102", name: "Стіл обідній", price: 6400, quantity: 4 },
+        { code: "M-103", name: "Крісло офісне", price: 4200, quantity: 5 },
+        { code: "M-104", name: "Шафа-купе", price: 11200, quantity: 1 },
+        { code: "M-105", name: "Ліжко двоспальне", price: 14800, quantity: 3 }
+    ];
+
+    let totalSum = 0;
+
+    document.write("<table border='0' cellspacing='0' cellpadding='5'>");
+
+    document.write("<tr>");
+    document.write("<th>Код</th>");
+    document.write("<th>Найменування</th>");
+    document.write("<th>Ціна за од. (грн)</th>");
+    document.write("<th>Кількість (шт.)</th>");
+    document.write("<th>Сума (грн)</th>");
+    document.write("</tr>");
+
+    for (let i = 0; i < furniture.length; i++) {
+        let itemSum = furniture[i].price * furniture[i].quantity;
+        totalSum += itemSum;
+
+        document.write("<tr>");
+        document.write("<td>" + furniture[i].code + "</td>");
+        document.write("<td>" + furniture[i].name + "</td>");
+        document.write("<td>" + furniture[i].price.toFixed(2) + "</td>");
+        document.write("<td>" + furniture[i].quantity + "</td>");
+        document.write("<td><b>" + itemSum.toFixed(2) + "</b></td>");
+        document.write("</tr>");
+    }
+
+    document.write("<tr>");
+    document.write("<td colspan='4'>Всього:</td>");
+    document.write("<td>" + totalSum.toFixed(2) + " грн</td>");
+    document.write("</tr>");
+
+    document.write("</table>");
+</script>
+
+</div>
+
+<div>
+<h2>Завдання 2</h2>
+<script>
+    const blocksCount = Math.floor(Math.random() * 5) + 6;
+    document.write(`<p>Згенеровано блоків: <strong>${blocksCount}</strong></p>`);
+
+    document.write('<div class="blocks-container">');
+    for (let i = 0; i < blocksCount; i++) {
+        document.write('<div class="block"></div>');
+    }
+document.write('</div>');
+</script>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
