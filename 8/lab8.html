@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<title>Lab8</title>
+        <link type="text/css" href="css8.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<h2 style="text-align: center;">Завдання 2</h2>
+
+<hr>
+
+<div>
+    
+<div class="slider">
+    <div class="item">
+        <img src="1.jpg" alt="Перший слайд">
+    </div>
+    <div class="item">
+        <img src="2.jpg" alt="Другий слайд">
+    </div>
+    <div class="item">
+        <img src="3.jpg" alt="Третій слайд">
+    </div>
+    <div class="item">
+        <img src="4.jpg" alt="Третій слайд">
+    </div>
+    <div class="item">
+        <img src="5.jpg" alt="Третій слайд">
+    </div>
+    <a class="prev" onclick="minusSlide()">&#10094;</a>
+    <a class="next" onclick="plusSlide()">&#10095;</a>
+</div>
+
+<div class="slider-dots">
+    <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(4)"></span>
+    <span class="slider-dots_item" onclick="currentSlide(5)"></span>
+</div>
+
+</div>
+
+<hr>
+
+<h2>Завдання 1</h2>
+
+<table class="grid-table">
+  <tr>
+    <td id="tab1">Tab 1</td>
+    <td id="tab2">Tab 2</td>
+    <td id="tab3">Tab 3</td>
+    <td id="tab4">Tab 4</td>
+    <td id="tab5">Tab 5</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <div id="contentBox">
+        <p id="contentBoxText"></p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<h2>Завдання 3</h2>
+
+<form id="furnitureForm" class="furniture-form" novalidate>
+    <h2>Форма підбору меблів</h2>
+
+    <div class="field-row">
+      <label>Прізвище:</label>
+      <input type="text" id="lastName" name="lastName">
+      <span class="error-msg" id="lastNameError"></span>
+    </div>
+
+    <div class="field-row">
+      <label>Ім'я:</label>
+      <input type="text" id="firstName" name="firstName">
+      <span class="error-msg" id="firstNameError"></span>
+    </div>
+
+    <div class="field-row">
+      <label>Email:</label>
+      <input type="email" id="email" name="email" placeholder="yourmail@gmail.com">
+      <span class="error-msg" id="emailError"></span>
+    </div>
+
+    <div class="field-row">
+      <label>Номер телефону:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+380501234567">
+      <span class="error-msg" id="phoneError"></span>
+    </div>
+
+    <div class="field-row">
+      <label>Адреса доставки:</label>
+      <input type="text" id="address" name="address">
+      <span class="error-msg" id="addressError"></span>
+    </div>
+
+    <hr>
+
+    <div class="field-group">
+      <p class="group-label">Оберіть категорію меблів:</p>
+      <label class="option-label"><input type="radio" name="category" value="Диван"> Диван</label>
+      <label class="option-label"><input type="radio" name="category" value="Ліжко"> Ліжко</label>
+      <label class="option-label"><input type="radio" name="category" value="Шафа"> Шафа</label>
+      <span class="error-msg" id="categoryError"></span>
+    </div>
+
+    <div class="field-row">
+      <label>Оберіть матеріал:</label>
+      <select id="material" name="material">
+        <option value="ДСП / МДФ">ДСП / МДФ</option>
+        <option value="Натуральне дерево">Натуральне дерево</option>
+        <option value="Тканина / Рогожка">Тканина / Рогожка</option>
+        <option value="Екошкіра / Шкіра">Екошкіра / Шкіра</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <div class="field-group">
+      <label class="group-label">Оберіть бажану ціну:</label>
+      <div class="range-wrap">
+        <input type="range" id="budget" name="budget" min="1000" max="150000" step="1000" value="25000">
+        <span id="budgetValue">25000 грн</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="field-group">
+      <label class="option-label">
+        <input type="checkbox" id="assembly" name="assembly">
+        Потрібне складання меблів
+      </label>
+    </div>
+
+    <div class="field-row textarea-row">
+      <label>Додаткові побажання:</label>
+      <textarea id="wishes" name="wishes" rows="3"></textarea>
+    </div>
+
+    <div class="buttons">
+      <button type="submit" class="btn-submit">Відправити</button>
+      <button type="reset" class="btn-cancel" id="cancelBtn">Скасувати</button>
+    </div>
+
+    <p class="form-status" id="formStatus"></p>
+  </form>
+
+
+
+<script src="script8.js"></script>
+
+</body>
+</html>
