@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Кросівки Classic Runner",
+    "category": "Shoe",
+    "amount": 5,
+    "image": "img/lab9-1.jpg",
+    "size": 42
+  },
+  {
+    "name": "Кеди Trekking Pro",
+    "category": "Shoe",
+    "amount": 3,
+    "image": "img/lab9-2.jpg",
+    "size": 43
+  },
+  {
+    "name": "Кросівки Urban Canvas",
+    "category": "Shoe",
+    "amount": 8,
+    "image": "img/lab9-3.jpg",
+    "size": 40
+  },
+  {
+    "name": "Кросівки City Style",
+    "category": "Shoe",
+    "amount": 0,
+    "image": "img/lab9-4.jpg",
+    "size": 41
+  },
+  {
+    "name": "Кросівки Summer Breeze",
+    "category": "Shoe",
+    "amount": 6,
+    "image": "img/lab9-5.jpg",
+    "size": 39
+  },
+  {
+    "name": "Кросівки Easy Walk",
+    "category": "Shoe",
+    "amount": 4,
+    "image": "img/lab9-6.jpg",
+    "size": 42
+  },
+  {
+    "name": "Сир",
+    "category": "Grocerie",
+    "amount": 12,
+    "image": "img/lab9-7.jpg",
+    "expiresInDays": 21
+  },
+  {
+    "name": "Молоко",
+    "category": "Grocerie",
+    "amount": 7,
+    "image": "img/lab9-8.jpg",
+    "expiresInDays": 14
+  },
+  {
+    "name": "Плитка шоколаду",
+    "category": "Grocerie",
+    "amount": 2,
+    "image": "img/lab9-9.jpg",
+    "expiresInDays": 360
+  },
+  {
+    "name": "Яблука",
+    "category": "Grocerie",
+    "amount": 0,
+    "image": "img/lab9-10.jpg",
+    "expiresInDays": 14
+  }
+]
