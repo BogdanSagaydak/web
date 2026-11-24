@@ -25,7 +25,6 @@ class Grocerie extends Product {
     }
 }
 
-// Створює Shoe або Grocerie на основі об'єкта з JSON
 function productFactory(data) {
     if (!data || typeof data !== "object") {
         throw new Error("Некоректні дані товару для productFactory");
@@ -40,13 +39,11 @@ function productFactory(data) {
     if (category === "Grocerie") {
         return new Grocerie(name, category, amount, image, data.expiresInDays ?? null);
     }
-
     throw new Error(`Невідома категорія товару: ${category}`);
 }
 
 class Basket {
     constructor() {
-        // Елемент масиву: { product, quantity, addedAt }
         this.products = [];
     }
 
@@ -79,7 +76,6 @@ class Basket {
         return record;
     }
 
-    // Повертає одну одиницю товару назад у магазин (якщо є в кошику)
     removeOne(product) {
         const idx = this.findItemIndex(product);
         if (idx === -1) return false;
@@ -93,7 +89,6 @@ class Basket {
         return true;
     }
 
-    // Повністю скасовує позицію та повертає всі одиниці на склад магазину
     cancelOrderItem(product) {
         const idx = this.findItemIndex(product);
         if (idx === -1) return false;
@@ -151,7 +146,7 @@ class Store {
     }
 }
 
-// --- Рендер списку товарів на головну сторінку ---
+
 function renderProductsList(store, containerId = "products-container") {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -356,8 +351,6 @@ window.fetch = async (url, options) => {
     return originalFetch(url, options);
 };
 
-
-// Ініціалізація магазину з JSON-файлу
 async function initStore() {
     const response = await fetch("lab9.json");
     const data = await response.json();
